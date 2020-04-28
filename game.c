@@ -1,6 +1,4 @@
-#include <stdio.h>
-#define col 8
-#define row 8
+#include "game.h"
 
 int isValidCell(int x, int y, int r, int c)
 {
@@ -41,13 +39,10 @@ void printArena(int a[col][row]){
     }
 }
 
-int main(int argc, char const *argv[])
-{
-    //TESTING
-    int arena[8][8] = {0};
-    arena[1][0] = 1;
-    arena[1][2] = 1;
-    printArena(arena);
-    printf("%d\n", aliveNeighborCount(1, 1, arena));
-    return 0;
+void copy_arr(int old[row][col],int new[row][col]){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            new[i][j] = old[i][j];
+        }
+    }
 }
