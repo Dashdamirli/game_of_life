@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include "game.c"
+// #include "game.c"
 #define ROW 8
 #define COLUMN 8
 int main(){
@@ -10,10 +10,8 @@ int main(){
    for(i=0; i<ROW; i++) {
       for(j=0;j<COLUMN;j++) {
          printf("%d ", arena[i][j]);
-         if(j==COLUMN-1){
-             printf("\n");
-         }
       }
+      printf("\n");
    }
    return 0;
 }
