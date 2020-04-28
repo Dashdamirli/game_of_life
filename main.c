@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include "game.c"
 #define ROW 8
 #define COLUMN 8
 int main(){
