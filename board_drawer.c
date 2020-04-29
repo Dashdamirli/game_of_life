@@ -1,7 +1,8 @@
-#include"game.h"
+#include "game.h"
 
-void printColored(int arena[row][col]){
-    
+void printColored(int arena[row][col])
+{
+
     //clear screen
     printf("\033[2J");
 
@@ -11,10 +12,12 @@ void printColored(int arena[row][col]){
     //goto 0,0
     printf("\033[0;0H");
 
-    for(int i=0;i<row;++i){
-        for(int j=0;j<col;++j){
+    for (int i = 0; i < row; ++i)
+    {
+        for (int j = 0; j < col; ++j)
+        {
             int c = (arena[i][j] == 1) ? 40 : 101;
-            printf("\033[%dm ",c);
+            printf("\033[%dm ", c);
         }
         printf("\n");
     }
@@ -22,4 +25,3 @@ void printColored(int arena[row][col]){
     //show cursor
     printf("\033[?25h");
 }
-

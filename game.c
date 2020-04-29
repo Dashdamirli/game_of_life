@@ -13,14 +13,17 @@ int aliveNeighborCount(int i, int j, int a[col][row])
     int counter = 0;
     int x = -1, y = -1;
     int neighbors[8][2] = {{-1, -1}, {-1, 0}, {-1, 1}, //TOP
-                        {0, -1}, {0, 1},//LEFT N RIGHT
-                        {1, -1}, {1, 0}, {1, 1}};//BOTTOM
+                           {0, -1},
+                           {0, 1}, //LEFT N RIGHT
+                           {1, -1},
+                           {1, 0},
+                           {1, 1}}; //BOTTOM
 
     for (int k = 0; k < 8; k++)
     {
         x = i + neighbors[k][0];
         y = j + neighbors[k][1];
-        if (isValidCell(x, y, col, row))//check if doesnt cross the borders
+        if (isValidCell(x, y, col, row)) //check if doesnt cross the borders
         {
             if (a[x][y] == 1)
                 counter++;
@@ -30,19 +33,25 @@ int aliveNeighborCount(int i, int j, int a[col][row])
     return counter;
 }
 
-void printArena(int a[col][row]){
-    for(int i=0; i<row; i++) {
-      for(int j=0;j<col;j++) {
-         printf("%d ", a[i][j]);
-      }
-      printf("\n");
+void printArena(int a[col][row])
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
     }
 }
 
-void copy_arr(int old[row][col],int new[row][col]){
-    for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            new[i][j] = old[i][j];
+void copy_arr(int oldarr[row][col], int newarr[row][col])
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            newarr[i][j] = oldarr[i][j];
         }
     }
 }
