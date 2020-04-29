@@ -1,5 +1,5 @@
-#include "game.c"
-#include "board_drawer.c"
+#include "game.h"
+#include "board_drawer.h"
 
 int main()
 {
@@ -7,7 +7,7 @@ int main()
    int new_arena[row][col] = {0};
    srand(time(NULL));
 
-   for (int r = 0; r < 100; r++)
+   for (int r = 0; r < 200; r++)
    {
       int r1 = rand() % (row - 1);
       int r2 = rand() % (col - 1);

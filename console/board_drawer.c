@@ -1,4 +1,4 @@
-#include "game.h"
+#include "board_drawer.h"
 
 void printColored(int arena[row][col])
 {

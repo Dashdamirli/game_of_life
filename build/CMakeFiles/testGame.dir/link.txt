@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/testGame.dir/game/game.c.o CMakeFiles/testGame.dir/console/board_drawer.c.o CMakeFiles/testGame.dir/main.c.o  -o testGame 
