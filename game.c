@@ -10,22 +10,76 @@ int isValidCell(int x, int y, int r, int c)
         return 0;
 }
 
+//original
+// int aliveNeighborCount(int i, int j, int a[col][row])
+// {
+//     int counter = 0;
+//     int x = -1, y = -1;
+//     int neighbors[8][2] = {{-1, -1}, {-1, 0}, {-1, 1}, //TOP
+//                         {0, -1}, {0, 1},//LEFT N RIGHT
+//                         {1, -1}, {1, 0}, {1, 1}};//BOTTOM
+
+//     for (int k = 0; k < 8; k++)
+//     {
+//         x = i + neighbors[k][0];
+//         y = j + neighbors[k][1];
+//         if (isValidCell(x, y, col, row))//check if doesnt cross the borders
+//         {
+//             if (a[x][y] == 1)
+//                 counter++;
+//         }
+//     }
+
+//     return counter;
+// }
+//updated
 int aliveNeighborCount(int i, int j, int a[col][row])
 {
     int counter = 0;
     int x = -1, y = -1;
     int neighbors[8][2] = {{-1, -1}, {-1, 0}, {-1, 1}, //TOP
-                        {0, -1}, {0, 1},//LEFT N RIGHT
-                        {1, -1}, {1, 0}, {1, 1}};//BOTTOM
+                           {0, -1},
+                           {0, 1}, //LEFT N RIGHT
+                           {1, -1},
+                           {1, 0},
+                           {1, 1}}; //BOTTOM
 
     for (int k = 0; k < 8; k++)
     {
         x = i + neighbors[k][0];
         y = j + neighbors[k][1];
-        if (isValidCell(x, y, col, row))//check if doesnt cross the borders
+        printf("x is %d and y is %d\n", x, y);
+        if (isValidCell(x, y, col, row)) //check if doesnt cross the borders
         {
             if (a[x][y] == 1)
                 counter++;
+        }
+        //diogonals
+        else if (x == -1 && y == -1) //top left
+        {
+        }
+        else if (x == -1 && y == col) //top right
+        {
+        }
+        else if (x == row && y == -1) //bottom left
+        {
+        }
+        else if (x == row && y == col) //bottom right
+        {
+        }
+        //row shifts
+        else if (x == row ) //row right
+        {
+        }
+        else if (x == -1) //row right
+        {
+        }
+        //column shifts
+         else if (y == col) //columup down
+        {
+        }
+        else if (y == -1) //column up
+        {
         }
     }
 
