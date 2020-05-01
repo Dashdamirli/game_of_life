@@ -1,6 +1,6 @@
 #include <stdio.h>
-#define col 8
-#define row 8
+#define col 4
+#define row 4
 
 int isValidCell(int x, int y, int r, int c)
 {
@@ -57,41 +57,71 @@ int aliveNeighborCount(int i, int j, int a[col][row])
         //diogonals
         else if (x == -1 && y == -1) //top left
         {
+            if (a[row-1][col-1] == 1)
+                counter++;
         }
         else if (x == -1 && y == col) //top right
         {
+            if (a[row-1][0] == 1)
+                counter++;
         }
         else if (x == row && y == -1) //bottom left
         {
+            if (a[0][col-1] == 1)
+                counter++;
         }
         else if (x == row && y == col) //bottom right
         {
+            if (a[0][0] == 1)
+                counter++;
         }
         //row shifts
-        else if (x == row ) //row right
+        else if (x == row) //row bottom
         {
+            if (a[0][y] == 1)
+                counter++;
         }
-        else if (x == -1) //row right
+        else if (x == -1) //row up
         {
+            if (a[col-1][y] == 1)
+               counter++;
         }
         //column shifts
-         else if (y == col) //columup down
+        else if (y == col) //columup down
         {
+           if (a[x][0] == 1)
+               counter++;
         }
         else if (y == -1) //column up
         {
+           if (a[x][col-1] == 1)
+               counter++;
         }
     }
 
     return counter;
 }
 
+void printArena(int a[col][row])
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     //TESTING
-    int arena[8][8] = {0};
+    int arena[4][4] = {0};
     arena[1][0] = 1;
-    arena[1][2] = 1;
-    printf("%d", aliveNeighborCount(1, 1, arena));
+    arena[1][3] = 1;
+     arena[3][3] = 1;
+    printf("%d\n", aliveNeighborCount(0, 0, arena));
+    printArena(arena);
     return 0;
 }
