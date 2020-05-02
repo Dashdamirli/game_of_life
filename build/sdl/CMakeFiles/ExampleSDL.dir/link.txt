@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/ExampleSDL.dir/sdl.c.o  -o ExampleSDL  -Wl,-rpath,/usr/local/lib /usr/local/lib/libSDL2.so /usr/local/lib/libSDL2main.a -Wl,-rpath,/usr/local/lib -Wl,--enable-new-dtags 

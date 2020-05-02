@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
@@ -20,7 +21,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -35,7 +36,7 @@
 					"source" : "console",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -50,7 +51,21 @@
 					"source" : "game",
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"build" : "sdl",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "sdl",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -61,7 +76,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
@@ -70,7 +86,7 @@
 					"name" : "game_of_life",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -82,7 +98,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -94,12 +110,31 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "ExampleSDL2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 3,
+					"id" : "ExampleSDL2::@7d0d1525ee0fd774d106",
+					"jsonFile" : "target-ExampleSDL2-e11ca7c313199d1b51b7.json",
+					"name" : "ExampleSDL2",
+					"projectIndex" : 3
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "console::@342071309315dfd6f20d",
