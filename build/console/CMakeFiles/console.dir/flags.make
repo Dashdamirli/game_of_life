@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS =  
 
-C_DEFINES = 
+C_DEFINES = -DUSING_LIB="\$$VALUE"
 
-C_INCLUDES = -I/root/Documents/L2_2/Developement_techniques/game_of_life/include 
+C_INCLUDES = -I/root/Documents/L2_2/Developement_techniques/game_of_life/console 
 

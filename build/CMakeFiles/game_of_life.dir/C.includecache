@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../include/board_drawer.h
-game.h
-../include/game.h
+../console/board_drawer.h
+../game/game.h
+../game/game.h
 
-../include/game.h
+../game/game.h
 stdio.h
 -
 unistd.h
@@ -19,14 +19,6 @@ stdlib.h
 -
 time.h
 -
-
-/root/Documents/L2_2/Developement_techniques/game_of_life/console/board_drawer.c
-board_drawer.h
-/root/Documents/L2_2/Developement_techniques/game_of_life/console/board_drawer.h
-
-/root/Documents/L2_2/Developement_techniques/game_of_life/game/game.c
-game.h
-/root/Documents/L2_2/Developement_techniques/game_of_life/game/game.h
 
 /root/Documents/L2_2/Developement_techniques/game_of_life/main.c
 game.h

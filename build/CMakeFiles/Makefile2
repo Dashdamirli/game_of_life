@@ -53,46 +53,142 @@ CMAKE_BINARY_DIR = /root/Documents/L2_2/Developement_techniques/game_of_life/bui
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/testGame.dir/all
+all: CMakeFiles/game_of_life.dir/all
+all: console/all
+all: game/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: console/preinstall
+preinstall: game/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/testGame.dir/clean
+clean: CMakeFiles/game_of_life.dir/clean
+clean: console/clean
+clean: game/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/testGame.dir
+# Directory level rules for directory console
+
+# Recursive "all" directory target.
+console/all: console/CMakeFiles/console.dir/all
+
+.PHONY : console/all
+
+# Recursive "preinstall" directory target.
+console/preinstall:
+
+.PHONY : console/preinstall
+
+# Recursive "clean" directory target.
+console/clean: console/CMakeFiles/console.dir/clean
+
+.PHONY : console/clean
+
+#=============================================================================
+# Directory level rules for directory game
+
+# Recursive "all" directory target.
+game/all: game/CMakeFiles/game.dir/all
+
+.PHONY : game/all
+
+# Recursive "preinstall" directory target.
+game/preinstall:
+
+.PHONY : game/preinstall
+
+# Recursive "clean" directory target.
+game/clean: game/CMakeFiles/game.dir/clean
+
+.PHONY : game/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/game_of_life.dir
 
 # All Build rule for target.
-CMakeFiles/testGame.dir/all:
-	$(MAKE) -f CMakeFiles/testGame.dir/build.make CMakeFiles/testGame.dir/depend
-	$(MAKE) -f CMakeFiles/testGame.dir/build.make CMakeFiles/testGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles --progress-num=1,2,3,4 "Built target testGame"
-.PHONY : CMakeFiles/testGame.dir/all
+CMakeFiles/game_of_life.dir/all: console/CMakeFiles/console.dir/all
+CMakeFiles/game_of_life.dir/all: game/CMakeFiles/game.dir/all
+	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/depend
+	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles --progress-num=5,6,7,8 "Built target game_of_life"
+.PHONY : CMakeFiles/game_of_life.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/testGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testGame.dir/all
+CMakeFiles/game_of_life.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game_of_life.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 0
-.PHONY : CMakeFiles/testGame.dir/rule
+.PHONY : CMakeFiles/game_of_life.dir/rule
 
 # Convenience name for target.
-testGame: CMakeFiles/testGame.dir/rule
+game_of_life: CMakeFiles/game_of_life.dir/rule
 
-.PHONY : testGame
+.PHONY : game_of_life
 
 # clean rule for target.
-CMakeFiles/testGame.dir/clean:
-	$(MAKE) -f CMakeFiles/testGame.dir/build.make CMakeFiles/testGame.dir/clean
-.PHONY : CMakeFiles/testGame.dir/clean
+CMakeFiles/game_of_life.dir/clean:
+	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/clean
+.PHONY : CMakeFiles/game_of_life.dir/clean
+
+#=============================================================================
+# Target rules for target console/CMakeFiles/console.dir
+
+# All Build rule for target.
+console/CMakeFiles/console.dir/all:
+	$(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/depend
+	$(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles --progress-num=1,2 "Built target console"
+.PHONY : console/CMakeFiles/console.dir/all
+
+# Build rule for subdir invocation for target.
+console/CMakeFiles/console.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 console/CMakeFiles/console.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 0
+.PHONY : console/CMakeFiles/console.dir/rule
+
+# Convenience name for target.
+console: console/CMakeFiles/console.dir/rule
+
+.PHONY : console
+
+# clean rule for target.
+console/CMakeFiles/console.dir/clean:
+	$(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/clean
+.PHONY : console/CMakeFiles/console.dir/clean
+
+#=============================================================================
+# Target rules for target game/CMakeFiles/game.dir
+
+# All Build rule for target.
+game/CMakeFiles/game.dir/all:
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/depend
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles --progress-num=3,4 "Built target game"
+.PHONY : game/CMakeFiles/game.dir/all
+
+# Build rule for subdir invocation for target.
+game/CMakeFiles/game.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 0
+.PHONY : game/CMakeFiles/game.dir/rule
+
+# Convenience name for target.
+game: game/CMakeFiles/game.dir/rule
+
+.PHONY : game
+
+# clean rule for target.
+game/CMakeFiles/game.dir/clean:
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/clean
+.PHONY : game/CMakeFiles/game.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

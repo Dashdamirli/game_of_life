@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles /root/Documents/L2_2/Developement_techniques/game_of_life/build/console/CMakeFiles/progress.marks
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 console/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/Documents/L2_2/Developement_techniques/game_of_life/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 console/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,138 +143,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 console/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 console/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named game_of_life
+# Convenience name for target.
+console/CMakeFiles/console.dir/rule:
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 console/CMakeFiles/console.dir/rule
+.PHONY : console/CMakeFiles/console.dir/rule
 
-# Build rule for target.
-game_of_life: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 game_of_life
-.PHONY : game_of_life
+# Convenience name for target.
+console: console/CMakeFiles/console.dir/rule
 
-# fast build rule for target.
-game_of_life/fast:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/build
-.PHONY : game_of_life/fast
-
-#=============================================================================
-# Target rules for targets named console
-
-# Build rule for target.
-console: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 console
 .PHONY : console
 
 # fast build rule for target.
 console/fast:
-	$(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
 .PHONY : console/fast
 
-#=============================================================================
-# Target rules for targets named game
+board_drawer.o: board_drawer.c.o
 
-# Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 game
-.PHONY : game
-
-# fast build rule for target.
-game/fast:
-	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
-.PHONY : game/fast
-
-console/board_drawer.o: console/board_drawer.c.o
-
-.PHONY : console/board_drawer.o
+.PHONY : board_drawer.o
 
 # target to build an object file
-console/board_drawer.c.o:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/console/board_drawer.c.o
-.PHONY : console/board_drawer.c.o
+board_drawer.c.o:
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/board_drawer.c.o
+.PHONY : board_drawer.c.o
 
-console/board_drawer.i: console/board_drawer.c.i
+board_drawer.i: board_drawer.c.i
 
-.PHONY : console/board_drawer.i
-
-# target to preprocess a source file
-console/board_drawer.c.i:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/console/board_drawer.c.i
-.PHONY : console/board_drawer.c.i
-
-console/board_drawer.s: console/board_drawer.c.s
-
-.PHONY : console/board_drawer.s
-
-# target to generate assembly for a file
-console/board_drawer.c.s:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/console/board_drawer.c.s
-.PHONY : console/board_drawer.c.s
-
-game/game.o: game/game.c.o
-
-.PHONY : game/game.o
-
-# target to build an object file
-game/game.c.o:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/game/game.c.o
-.PHONY : game/game.c.o
-
-game/game.i: game/game.c.i
-
-.PHONY : game/game.i
+.PHONY : board_drawer.i
 
 # target to preprocess a source file
-game/game.c.i:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/game/game.c.i
-.PHONY : game/game.c.i
+board_drawer.c.i:
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/board_drawer.c.i
+.PHONY : board_drawer.c.i
 
-game/game.s: game/game.c.s
+board_drawer.s: board_drawer.c.s
 
-.PHONY : game/game.s
-
-# target to generate assembly for a file
-game/game.c.s:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/game/game.c.s
-.PHONY : game/game.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
+.PHONY : board_drawer.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/main.c.s
-.PHONY : main.c.s
+board_drawer.c.s:
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/board_drawer.c.s
+.PHONY : board_drawer.c.s
 
 # Help Target
 help:
@@ -288,18 +210,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... game_of_life"
 	@echo "... console"
-	@echo "... game"
-	@echo "... console/board_drawer.o"
-	@echo "... console/board_drawer.i"
-	@echo "... console/board_drawer.s"
-	@echo "... game/game.o"
-	@echo "... game/game.i"
-	@echo "... game/game.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... board_drawer.o"
+	@echo "... board_drawer.i"
+	@echo "... board_drawer.s"
 .PHONY : help
 
 
@@ -311,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -14,7 +14,7 @@ int main()
       arena[r1][r2] = 1;
    }
    // printArena(arena);
-   // printColored(arena);
+   printColored(arena);
 
    int k = 0;
    while (k < 500)

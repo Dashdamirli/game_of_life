@@ -209,6 +209,21 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//console_value
+VALUE:STRING=
+
+//Value Computed by CMake
+console_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/build/console
+
+//Value Computed by CMake
+console_SOURCE_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/console
+
+//Value Computed by CMake
+game_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/build/game
+
+//Value Computed by CMake
+game_SOURCE_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/game
+
 //Value Computed by CMake
 game_of_life_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/build
 
@@ -320,7 +335,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
