@@ -13,9 +13,9 @@ void printColored(int arena[row][col])
         //goto 0,0
         printf("\033[0;0H");
 
-        for (int i = 0; i < row; ++i)
+        for (int i = 0; i < 40; ++i)
         {
-            for (int j = 0; j < col; ++j)
+            for (int j = 0; j < 40; ++j)
             {
                 int c = (arena[i][j] == 1) ? 40 : 101;
                 printf("\033[%dm ", c);

@@ -14,8 +14,19 @@ int main()
       int r2 = rand() % (col - 1);
       arena[r1][r2] = 1;
    }
-
-   drawPixel(arena);
+   char input;
+   printf("Enter [t] for terminal and [s] for SDL version\n");
+   scanf("%c",&input);
+   while(1){
+      if(input == 't'){
+         printColored(arena);
+         break;
+      }else if(input == 's'){
+         drawPixel(arena);
+         break;
+      }else printf("Please enter either [t] or [s]\n");
+   }
+   
 
    return 0;
 }
