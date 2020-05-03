@@ -14,6 +14,7 @@
 #include <SDL2/SDL_image.h> 
 // for using SDL_Delay() functions 
 #include <SDL2/SDL_timer.h> 
-int drawPixel(int arena[row][col]);
 void draw(SDL_Renderer* renderer,int arena[row][col]);
+int drawPixel(int arena[row][col]);
+
 #endif

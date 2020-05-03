@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/game_of_life.dir/console/board_drawer.c.o"
   "CMakeFiles/game_of_life.dir/game/game.c.o"
   "CMakeFiles/game_of_life.dir/main.c.o"
+  "CMakeFiles/game_of_life.dir/sdl/sdl.c.o"
   "game_of_life"
   "game_of_life.pdb"
 )

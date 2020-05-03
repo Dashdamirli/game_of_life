@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS =  
 
-C_DEFINES = 
+C_DEFINES = -DUSING_LIB=""
 
-C_INCLUDES = -isystem /usr/local/include/SDL2 
+C_INCLUDES = -I/root/Documents/L2_2/Developement_techniques/game_of_life/sdl -isystem /usr/local/include/SDL2 
 

@@ -1122,54 +1122,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "ExampleSDL2_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl"
-		},
-		{
-			"name" : "ExampleSDL2_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life/sdl"
-		},
-		{
-			"name" : "ExampleSDL_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl"
-		},
-		{
-			"name" : "ExampleSDL_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life/sdl"
-		},
-		{
 			"name" : "SDL2_DIR",
 			"properties" : 
 			[
@@ -1264,6 +1216,30 @@
 			],
 			"type" : "STATIC",
 			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life"
+		},
+		{
+			"name" : "sdl_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl"
+		},
+		{
+			"name" : "sdl_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/root/Documents/L2_2/Developement_techniques/game_of_life/sdl"
 		}
 	],
 	"kind" : "cache",

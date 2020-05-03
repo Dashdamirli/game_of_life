@@ -196,17 +196,17 @@ game/fast:
 .PHONY : game/fast
 
 #=============================================================================
-# Target rules for targets named ExampleSDL2
+# Target rules for targets named sdl
 
 # Build rule for target.
-ExampleSDL2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ExampleSDL2
-.PHONY : ExampleSDL2
+sdl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sdl
+.PHONY : sdl
 
 # fast build rule for target.
-ExampleSDL2/fast:
-	$(MAKE) -f sdl/CMakeFiles/ExampleSDL2.dir/build.make sdl/CMakeFiles/ExampleSDL2.dir/build
-.PHONY : ExampleSDL2/fast
+sdl/fast:
+	$(MAKE) -f sdl/CMakeFiles/sdl.dir/build.make sdl/CMakeFiles/sdl.dir/build
+.PHONY : sdl/fast
 
 console/board_drawer.o: console/board_drawer.c.o
 
@@ -289,6 +289,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/main.c.s
 .PHONY : main.c.s
 
+sdl/sdl.o: sdl/sdl.c.o
+
+.PHONY : sdl/sdl.o
+
+# target to build an object file
+sdl/sdl.c.o:
+	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/sdl/sdl.c.o
+.PHONY : sdl/sdl.c.o
+
+sdl/sdl.i: sdl/sdl.c.i
+
+.PHONY : sdl/sdl.i
+
+# target to preprocess a source file
+sdl/sdl.c.i:
+	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/sdl/sdl.c.i
+.PHONY : sdl/sdl.c.i
+
+sdl/sdl.s: sdl/sdl.c.s
+
+.PHONY : sdl/sdl.s
+
+# target to generate assembly for a file
+sdl/sdl.c.s:
+	$(MAKE) -f CMakeFiles/game_of_life.dir/build.make CMakeFiles/game_of_life.dir/sdl/sdl.c.s
+.PHONY : sdl/sdl.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -304,7 +331,7 @@ help:
 	@echo "... game_of_life"
 	@echo "... console"
 	@echo "... game"
-	@echo "... ExampleSDL2"
+	@echo "... sdl"
 	@echo "... console/board_drawer.o"
 	@echo "... console/board_drawer.i"
 	@echo "... console/board_drawer.s"
@@ -314,6 +341,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sdl/sdl.o"
+	@echo "... sdl/sdl.i"
+	@echo "... sdl/sdl.s"
 .PHONY : help
 
 

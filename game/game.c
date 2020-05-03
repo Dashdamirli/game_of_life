@@ -55,3 +55,31 @@ void copy_arr(int oldarr[row][col], int newarr[row][col])
         }
     }
 }
+
+void refresh(int arena[row][col]){
+    int new_arena[row][col] = {0};
+    
+    printf("\n\n");
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+        if (arena[i][j] == 0)
+        {
+            if (aliveNeighborCount(i, j, arena) == 3)
+                new_arena[i][j] = 1;
+            else
+                new_arena[i][j] = 0;
+        }
+        else
+        {
+            if (aliveNeighborCount(i, j, arena) == 2 || aliveNeighborCount(i, j, arena) == 3)
+                new_arena[i][j] = 1;
+            else
+                new_arena[i][j] = 0;
+        }
+        }
+    }
+    sleep(0.1);
+    copy_arr(new_arena, arena);
+}

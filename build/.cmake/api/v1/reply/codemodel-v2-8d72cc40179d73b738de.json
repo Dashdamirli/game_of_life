@@ -15,13 +15,13 @@
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.16.3"
+						"string" : "3.6"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						3
+						2
 					]
 				},
 				{
@@ -36,7 +36,7 @@
 					"source" : "console",
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -51,21 +51,22 @@
 					"source" : "game",
 					"targetIndexes" : 
 					[
-						2
+						1
 					]
 				},
 				{
 					"build" : "sdl",
+					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.6"
+						"string" : "3.16.3"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 3,
 					"source" : "sdl",
 					"targetIndexes" : 
 					[
-						0
+						3
 					]
 				}
 			],
@@ -86,7 +87,7 @@
 					"name" : "game_of_life",
 					"targetIndexes" : 
 					[
-						3
+						2
 					]
 				},
 				{
@@ -98,7 +99,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -110,7 +111,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						2
+						1
 					]
 				},
 				{
@@ -118,23 +119,16 @@
 					[
 						3
 					],
-					"name" : "ExampleSDL2",
+					"name" : "sdl",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
-				{
-					"directoryIndex" : 3,
-					"id" : "ExampleSDL2::@7d0d1525ee0fd774d106",
-					"jsonFile" : "target-ExampleSDL2-e11ca7c313199d1b51b7.json",
-					"name" : "ExampleSDL2",
-					"projectIndex" : 3
-				},
 				{
 					"directoryIndex" : 1,
 					"id" : "console::@342071309315dfd6f20d",
@@ -152,9 +146,16 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "game_of_life::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-game_of_life-20d7cd987077c27bbb59.json",
+					"jsonFile" : "target-game_of_life-f3189e7b15b68fe93a89.json",
 					"name" : "game_of_life",
 					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sdl::@7d0d1525ee0fd774d106",
+					"jsonFile" : "target-sdl-105f8167e6d273c18344.json",
+					"name" : "sdl",
+					"projectIndex" : 3
 				}
 			]
 		}

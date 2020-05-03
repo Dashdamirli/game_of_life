@@ -10,5 +10,10 @@ CMakeFiles/game_of_life.dir/game/game.c.o: ../game/game.h
 
 CMakeFiles/game_of_life.dir/main.c.o: ../console/board_drawer.h
 CMakeFiles/game_of_life.dir/main.c.o: ../game/game.h
+CMakeFiles/game_of_life.dir/main.c.o: ../sdl/sdl.h
 CMakeFiles/game_of_life.dir/main.c.o: ../main.c
+
+CMakeFiles/game_of_life.dir/sdl/sdl.c.o: ../game/game.h
+CMakeFiles/game_of_life.dir/sdl/sdl.c.o: ../sdl/sdl.c
+CMakeFiles/game_of_life.dir/sdl/sdl.c.o: ../sdl/sdl.h
 

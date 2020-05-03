@@ -209,18 +209,6 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-ExampleSDL2_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl
-
-//Value Computed by CMake
-ExampleSDL2_SOURCE_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/sdl
-
-//Value Computed by CMake
-ExampleSDL_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl
-
-//Value Computed by CMake
-ExampleSDL_SOURCE_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/sdl
-
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/local/lib/cmake/SDL2
 
@@ -244,6 +232,12 @@ game_of_life_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game
 
 //Value Computed by CMake
 game_of_life_SOURCE_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life
+
+//Value Computed by CMake
+sdl_BINARY_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl
+
+//Value Computed by CMake
+sdl_SOURCE_DIR:STATIC=/root/Documents/L2_2/Developement_techniques/game_of_life/sdl
 
 
 ########################

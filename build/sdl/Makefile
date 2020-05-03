@@ -157,19 +157,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-sdl/CMakeFiles/ExampleSDL2.dir/rule:
-	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 sdl/CMakeFiles/ExampleSDL2.dir/rule
-.PHONY : sdl/CMakeFiles/ExampleSDL2.dir/rule
+sdl/CMakeFiles/sdl.dir/rule:
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f CMakeFiles/Makefile2 sdl/CMakeFiles/sdl.dir/rule
+.PHONY : sdl/CMakeFiles/sdl.dir/rule
 
 # Convenience name for target.
-ExampleSDL2: sdl/CMakeFiles/ExampleSDL2.dir/rule
+sdl: sdl/CMakeFiles/sdl.dir/rule
 
-.PHONY : ExampleSDL2
+.PHONY : sdl
 
 # fast build rule for target.
-ExampleSDL2/fast:
-	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/ExampleSDL2.dir/build.make sdl/CMakeFiles/ExampleSDL2.dir/build
-.PHONY : ExampleSDL2/fast
+sdl/fast:
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/sdl.dir/build.make sdl/CMakeFiles/sdl.dir/build
+.PHONY : sdl/fast
 
 sdl.o: sdl.c.o
 
@@ -177,7 +177,7 @@ sdl.o: sdl.c.o
 
 # target to build an object file
 sdl.c.o:
-	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/ExampleSDL2.dir/build.make sdl/CMakeFiles/ExampleSDL2.dir/sdl.c.o
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/sdl.dir/build.make sdl/CMakeFiles/sdl.dir/sdl.c.o
 .PHONY : sdl.c.o
 
 sdl.i: sdl.c.i
@@ -186,7 +186,7 @@ sdl.i: sdl.c.i
 
 # target to preprocess a source file
 sdl.c.i:
-	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/ExampleSDL2.dir/build.make sdl/CMakeFiles/ExampleSDL2.dir/sdl.c.i
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/sdl.dir/build.make sdl/CMakeFiles/sdl.dir/sdl.c.i
 .PHONY : sdl.c.i
 
 sdl.s: sdl.c.s
@@ -195,7 +195,7 @@ sdl.s: sdl.c.s
 
 # target to generate assembly for a file
 sdl.c.s:
-	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/ExampleSDL2.dir/build.make sdl/CMakeFiles/ExampleSDL2.dir/sdl.c.s
+	cd /root/Documents/L2_2/Developement_techniques/game_of_life/build && $(MAKE) -f sdl/CMakeFiles/sdl.dir/build.make sdl/CMakeFiles/sdl.dir/sdl.c.s
 .PHONY : sdl.c.s
 
 # Help Target
@@ -210,7 +210,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ExampleSDL2"
+	@echo "... sdl"
 	@echo "... sdl.o"
 	@echo "... sdl.i"
 	@echo "... sdl.s"

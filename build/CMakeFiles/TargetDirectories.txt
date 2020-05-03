@@ -25,4 +25,4 @@
 /root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl/CMakeFiles/list_install_components.dir
 /root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl/CMakeFiles/rebuild_cache.dir
 /root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl/CMakeFiles/edit_cache.dir
-/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl/CMakeFiles/ExampleSDL2.dir
+/root/Documents/L2_2/Developement_techniques/game_of_life/build/sdl/CMakeFiles/sdl.dir

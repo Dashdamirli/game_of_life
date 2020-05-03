@@ -1,142 +1,61 @@
 #include "sdl.h"
 
-// int drawPixel(){
-//     int quit = 1;
-
-//     int leftMouseButtonDown = 0;
-
-//     SDL_Event event;
-
-//     SDL_Init(SDL_INIT_VIDEO);
-
-//     SDL_Window * window = SDL_CreateWindow("SDL2 Pixel Drawing",
-//         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, 0);
-    
-//     SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
-
-//     SDL_Texture * texture = SDL_CreateTexture(renderer,
-//         SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STATIC, 640, 480);
-
-//     int pixels[307200];
-
-//     memset(pixels, 255, 640 * 480 * sizeof(Uint32));
-
-//     while (quit){
-
-//         SDL_UpdateTexture(texture, NULL, pixels, 640 * sizeof(Uint32));
-
-
-//         SDL_WaitEvent(&event);
-
-//         switch (event.type){
-//             case SDL_QUIT:
-//                 quit = 0;
-//             break;
-            
-//             case SDL_MOUSEBUTTONUP:
-//                 if (event.button.button == SDL_BUTTON_LEFT)
-//                     leftMouseButtonDown = 0;
-//                 break;
-
-//             case SDL_MOUSEBUTTONDOWN:
-//                 if (event.button.button == SDL_BUTTON_LEFT)
-//                     leftMouseButtonDown = 1;
-//             case SDL_MOUSEMOTION:
-//                 if (leftMouseButtonDown){
-//                     int mouseX = event.motion.x;
-//                     int mouseY = event.motion.y;
-//                     pixels[mouseY * 640 + mouseX] = 0;
-//                 }
-//                 break;
-//         }
-        
-//         SDL_RenderClear(renderer);
-//         SDL_RenderCopy(renderer, texture, NULL, NULL);
-//         SDL_RenderPresent(renderer);
-
-//     }
-
-
-//     SDL_DestroyTexture(texture);
-
-//     SDL_DestroyRenderer(renderer);
-
-//     SDL_DestroyWindow(window);
-
-//     SDL_Quit();
-
-//     return 0;
-// }
-
-
-int main(int argc, char ** argv)
-
+void draw(SDL_Renderer* renderer,int arena[row][col])
 {
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+	SDL_RenderClear(renderer);
 
-    int quit = 1;
+	SDL_SetRenderDrawColor(renderer, 255,255,255,255);
 
-    int leftMouseButtonDown = 0;
+    refresh(arena);
 
-    SDL_Event event;
+	for(int i=0; i<row; ++i)
+	{
+		for(int j= 0; j<col; ++j){
+			if(arena[i][j]==1){
+                SDL_SetRenderDrawColor(renderer, 255,0,0,255);
+            }else{
+                SDL_SetRenderDrawColor(renderer, 0,0,0,255);
+            }
+            SDL_RenderDrawPoint(renderer,i,j);
+       }
+	}
 
-    SDL_Init(SDL_INIT_VIDEO);
-
-    SDL_Window * window = SDL_CreateWindow("SDL2 Pixel Drawing",
-        SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, 0);
-    
-    SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
-
-    SDL_Texture * texture = SDL_CreateTexture(renderer,
-        SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STATIC, 640, 480);
-
-    int pixels[307200];
-
-    memset(pixels, 255, 640 * 480 * sizeof(Uint32));
-
-    while (quit){
-
-        SDL_UpdateTexture(texture, NULL, pixels, 640 * sizeof(Uint32));
+}
 
 
-        SDL_WaitEvent(&event);
 
-        switch (event.type){
-            case SDL_QUIT:
-                quit = 0;
-            break;
-            
-            case SDL_MOUSEBUTTONUP:
-                if (event.button.button == SDL_BUTTON_LEFT)
-                    leftMouseButtonDown = 0;
-                break;
+int drawPixel(int arena[row][col])
+{
+	if (SDL_Init(SDL_INIT_VIDEO) != 0)
+	{
+		fprintf(stderr,"Problem can not init SDL2 \n");
+		return 0;
+	}
 
-            case SDL_MOUSEBUTTONDOWN:
-                if (event.button.button == SDL_BUTTON_LEFT)
-                    leftMouseButtonDown = 1;
-            case SDL_MOUSEMOTION:
-                if (leftMouseButtonDown){
-                    int mouseX = event.motion.x;
-                    int mouseY = event.motion.y;
-                    pixels[mouseY * 640 + mouseX] = 0;
-                }
-                break;
-        }
-        
-        SDL_RenderClear(renderer);
-        SDL_RenderCopy(renderer, texture, NULL, NULL);
-        SDL_RenderPresent(renderer);
+	SDL_Window* window = SDL_CreateWindow("Life",
+										  SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+										  row, col, SDL_WINDOW_SHOWN|SDL_WINDOW_ALLOW_HIGHDPI);
+	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1,SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
+	assert (renderer != NULL);
 
-    }
-
-
-    SDL_DestroyTexture(texture);
-
-    SDL_DestroyRenderer(renderer);
-
-    SDL_DestroyWindow(window);
-
-    SDL_Quit();
-
-    return 0;
-
+// SIMPLE EVENT & DRAWING LOOP
+	bool quit = false;
+	while (!quit)
+	{
+		SDL_Event event;
+		while (!quit && SDL_PollEvent(&event))
+		{
+			switch (event.type)
+			{
+			case SDL_QUIT:
+				quit = true;
+				break;
+			}
+		}
+		draw(renderer,arena);
+		SDL_RenderPresent(renderer);
+	}
+	SDL_Quit();
+	return 0;
 }

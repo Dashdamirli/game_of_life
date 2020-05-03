@@ -56,5 +56,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/game_of_life.dir/DependInfo.cmake"
   "console/CMakeFiles/console.dir/DependInfo.cmake"
   "game/CMakeFiles/game.dir/DependInfo.cmake"
-  "sdl/CMakeFiles/ExampleSDL2.dir/DependInfo.cmake"
+  "sdl/CMakeFiles/sdl.dir/DependInfo.cmake"
   )

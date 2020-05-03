@@ -2,26 +2,29 @@
 
 void printColored(int arena[row][col])
 {
+    int k=0;
+    while(k<500){
+        //clear screen
+        printf("\033[2J");
 
-    //clear screen
-    printf("\033[2J");
+        //hide cursor
+        printf("\033[?25l");
 
-    //hide cursor
-    printf("\033[?25l");
+        //goto 0,0
+        printf("\033[0;0H");
 
-    //goto 0,0
-    printf("\033[0;0H");
-
-    for (int i = 0; i < row; ++i)
-    {
-        for (int j = 0; j < col; ++j)
+        for (int i = 0; i < row; ++i)
         {
-            int c = (arena[i][j] == 1) ? 40 : 101;
-            printf("\033[%dm ", c);
+            for (int j = 0; j < col; ++j)
+            {
+                int c = (arena[i][j] == 1) ? 40 : 101;
+                printf("\033[%dm ", c);
+            }
+            printf("\n");
         }
-        printf("\n");
-    }
 
-    //show cursor
-    printf("\033[?25h");
+        //show cursor
+        printf("\033[?25h");
+        refresh(arena);
+    }
 }
