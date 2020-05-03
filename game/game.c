@@ -159,7 +159,7 @@ void refresh(int arena[row][col],int circular){
         {
         if (arena[i][j] == 0)
         {
-            if (aliveNeighborCount(i, j, arena) == 3)
+            if (aliveNeighborCount(i, j, arena,circular) == 3)
                 new_arena[i][j] = 1;
             else
                 new_arena[i][j] = 0;
