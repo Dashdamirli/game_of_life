@@ -6,8 +6,9 @@ void draw(SDL_Renderer* renderer,int arena[row][col])
 	SDL_RenderClear(renderer);
 
 	SDL_SetRenderDrawColor(renderer, 255,255,255,255);
-
-    refresh(arena);
+	
+	int circular = 1;
+    refresh(arena,circular);
 
 	for(int i=0; i<row; ++i)
 	{
