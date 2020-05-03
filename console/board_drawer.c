@@ -1,5 +1,9 @@
 #include "board_drawer.h"
 
+
+/**
+ * @brief prints the game onto the console
+ */
 void printColored(int arena[row][col])
 {
     int k=0;
@@ -25,6 +29,6 @@ void printColored(int arena[row][col])
 
         //show cursor
         printf("\033[?25h");
-        refresh(arena);
+        refresh(arena,1);
     }
 }
