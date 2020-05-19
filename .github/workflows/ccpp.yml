@@ -15,8 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: configure
-        run: ./configure
       - name: Create build file
         run: |
           mkdir build 
