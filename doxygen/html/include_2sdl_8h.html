@@ -104,9 +104,10 @@ $(document).ready(function(){initNavTree('include_2sdl_8h.html',''); initResizab
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a417276c0205ce9886f274df89abd6d9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2sdl_8h.html#a417276c0205ce9886f274df89abd6d9a">draw</a> (SDL_Renderer *renderer, int arena[<a class="el" href="include_2game_8h.html#aece949dcac4360a3141f73eaec44e155">row</a>][<a class="el" href="include_2game_8h.html#a754f5c59516f130c30fc468b98c65154">col</a>])</td></tr>
-<tr class="memdesc:a417276c0205ce9886f274df89abd6d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The primary function that dispals everything in SDL(Simple DirectMedia Layer)  <a href="include_2sdl_8h.html#a417276c0205ce9886f274df89abd6d9a">More...</a><br /></td></tr>
+<tr class="memdesc:a417276c0205ce9886f274df89abd6d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The primary function that displays everything in SDL(Simple DirectMedia Layer) The function sets the background color and then changes colors if the cell is alive or becomes alive. If a cell is dead or it becomes dead, the color is set back to background color.  <a href="include_2sdl_8h.html#a417276c0205ce9886f274df89abd6d9a">More...</a><br /></td></tr>
 <tr class="separator:a417276c0205ce9886f274df89abd6d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85a10c7557e668570e1f6ad712b49c76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="include_2sdl_8h.html#a85a10c7557e668570e1f6ad712b49c76">drawPixel</a> (int arena[<a class="el" href="include_2game_8h.html#aece949dcac4360a3141f73eaec44e155">row</a>][<a class="el" href="include_2game_8h.html#a754f5c59516f130c30fc468b98c65154">col</a>])</td></tr>
+<tr class="memdesc:a85a10c7557e668570e1f6ad712b49c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates window and renderer for drawing on The function initialises the SDL2 ,readies everything for draw function. It continuously calls draw function till SDL_QUIT event occurs.  <a href="include_2sdl_8h.html#a85a10c7557e668570e1f6ad712b49c76">More...</a><br /></td></tr>
 <tr class="separator:a85a10c7557e668570e1f6ad712b49c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -136,7 +137,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The primary function that dispals everything in SDL(Simple DirectMedia Layer) </p>
+<p>The primary function that displays everything in SDL(Simple DirectMedia Layer) The function sets the background color and then changes colors if the cell is alive or becomes alive. If a cell is dead or it becomes dead, the color is set back to background color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">renderer</td><td>the default SDL renderer. </td></tr>
@@ -189,6 +190,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates window and renderer for drawing on The function initialises the SDL2 ,readies everything for draw function. It continuously calls draw function till SDL_QUIT event occurs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>the 2D array which will be our arena where the algorithm runs. </td></tr>
@@ -197,40 +200,40 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if everything went okay. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="sdl_8c_source.html#l00043">43</a> of file <a class="el" href="sdl_8c_source.html">sdl.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO) != 0)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Problem can not init SDL2 \n&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    SDL_Window *window = SDL_CreateWindow(<span class="stringliteral">&quot;Life&quot;</span>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                          SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                          <a class="code" href="game_2game_8h.html#aece949dcac4360a3141f73eaec44e155">row</a>, <a class="code" href="game_2game_8h.html#a754f5c59516f130c30fc468b98c65154">col</a>, SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    assert(renderer != NULL);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// SIMPLE EVENT &amp; DRAWING LOOP</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> quit = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">while</span> (!quit)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        SDL_Event event;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">while</span> (!quit &amp;&amp; SDL_PollEvent(&amp;event))</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">switch</span> (event.type)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">case</span> SDL_QUIT:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                quit = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="sdl_8c.html#a417276c0205ce9886f274df89abd6d9a">draw</a>(renderer, arena);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        SDL_RenderPresent(renderer);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    SDL_Quit();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="sdl_8c_source.html#l00044">44</a> of file <a class="el" href="sdl_8c_source.html">sdl.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO) != 0)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Problem can not init SDL2 \n&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    SDL_Window *window = SDL_CreateWindow(<span class="stringliteral">&quot;Life&quot;</span>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                          SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                          <a class="code" href="game_2game_8h.html#aece949dcac4360a3141f73eaec44e155">row</a>, <a class="code" href="game_2game_8h.html#a754f5c59516f130c30fc468b98c65154">col</a>, SDL_WINDOW_SHOWN | SDL_WINDOW_ALLOW_HIGHDPI);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    assert(renderer != NULL);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// SIMPLE EVENT &amp; DRAWING LOOP</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> quit = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">while</span> (!quit)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        SDL_Event event;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">while</span> (!quit &amp;&amp; SDL_PollEvent(&amp;event))</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">switch</span> (event.type)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">case</span> SDL_QUIT:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                quit = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="sdl_8c.html#a417276c0205ce9886f274df89abd6d9a">draw</a>(renderer, arena);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        SDL_RenderPresent(renderer);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    SDL_Quit();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -239,7 +242,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="agame_2game_8h_html_aece949dcac4360a3141f73eaec44e155"><div class="ttname"><a href="game_2game_8h.html#aece949dcac4360a3141f73eaec44e155">row</a></div><div class="ttdeci">#define row</div><div class="ttdef"><b>Definition:</b> <a href="game_2game_8h_source.html#l00008">game.h:7</a></div></div>
 <div class="ttc" id="agame_8c_html_a9ef9a56369c8d11d5a790aa0d8c30089"><div class="ttname"><a href="game_8c.html#a9ef9a56369c8d11d5a790aa0d8c30089">refresh</a></div><div class="ttdeci">void refresh(int arena[row][col], int circular)</div><div class="ttdoc">Resreshes the array.</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00151">game.c:151</a></div></div>
 <div class="ttc" id="agame_2game_8h_html_a754f5c59516f130c30fc468b98c65154"><div class="ttname"><a href="game_2game_8h.html#a754f5c59516f130c30fc468b98c65154">col</a></div><div class="ttdeci">#define col</div><div class="ttdef"><b>Definition:</b> <a href="game_2game_8h_source.html#l00007">game.h:6</a></div></div>
-<div class="ttc" id="asdl_8c_html_a417276c0205ce9886f274df89abd6d9a"><div class="ttname"><a href="sdl_8c.html#a417276c0205ce9886f274df89abd6d9a">draw</a></div><div class="ttdeci">void draw(SDL_Renderer *renderer, int arena[row][col])</div><div class="ttdoc">The primary function that dispals everything in SDL(Simple DirectMedia Layer)</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8c_source.html#l00010">sdl.c:10</a></div></div>
+<div class="ttc" id="asdl_8c_html_a417276c0205ce9886f274df89abd6d9a"><div class="ttname"><a href="sdl_8c.html#a417276c0205ce9886f274df89abd6d9a">draw</a></div><div class="ttdeci">void draw(SDL_Renderer *renderer, int arena[row][col])</div><div class="ttdoc">The primary function that displays everything in SDL(Simple DirectMedia Layer) The function sets the ...</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8c_source.html#l00010">sdl.c:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

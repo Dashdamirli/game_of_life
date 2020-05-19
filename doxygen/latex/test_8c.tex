@@ -1,0 +1,390 @@
+\hypertarget{test_8c}{}\doxysection{C\+:/\+Users/\+Turqay/\+Desktop/game\+\_\+of\+\_\+life/unit\+Tests/test.c File Reference}
+\label{test_8c}\index{C:/Users/Turqay/Desktop/game\_of\_life/unitTests/test.c@{C:/Users/Turqay/Desktop/game\_of\_life/unitTests/test.c}}
+{\ttfamily \#include $<$C\+Unit/\+C\+Unit.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+Basic.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../game/game.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../game/game.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_8c_a908fa51bbee7ba5a8d6b0abe351bc551}{maxi}} (int i1, int i2)
+\item 
+void \mbox{\hyperlink{test_8c_a69e244c6d5b506a50506783ca8f60b94}{test\+\_\+maxi}} (void)
+\item 
+void \mbox{\hyperlink{test_8c_ab04072aee69e3bc6027a0e1dd618652d}{is\+Valid\+Cell\+Test1}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a8f470cb878ec5eec1e52a3448b0647c1}{is\+Valid\+Cell\+Test2}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a6c9722beafb95757f082e21831cb0e1b}{is\+Valid\+Cell\+Test3}} ()
+\item 
+void \mbox{\hyperlink{test_8c_ad721b57ad96191fd3343c7c55f20e9d8}{is\+Valid\+Cell\+Test4}} ()
+\item 
+void \mbox{\hyperlink{test_8c_adb8e89f5b0a832141427a59437111cce}{is\+Valid\+Cell\+Test5}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a5271572813d5eab56d2f64854731c259}{is\+Valid\+Cell\+Test6}} ()
+\item 
+void \mbox{\hyperlink{test_8c_afbff68d24d39917d103e95526828c914}{is\+Valid\+Cell\+Test7}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a765ff890f1e9e61207712bc445df32a7}{alive\+Neighbor\+Count\+\_\+test1}} ()
+\item 
+void \mbox{\hyperlink{test_8c_ad91ba5cc713e8c36c5e04c8b3106b4db}{alive\+Neighbor\+Count\+\_\+test2}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a6662da30bb56af7b4b815e7ad08e7e85}{alive\+Neighbor\+Count\+\_\+test3}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a62f1162ff3144c628f90b336c0a13d03}{alive\+Neighbor\+Count\+\_\+test4}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a92abc93888185b07dd2b00780baa4dc5}{alive\+Neighbor\+Count\+\_\+test5}} ()
+\item 
+void \mbox{\hyperlink{test_8c_a366a468215a01efb4a19ddb515186824}{alive\+Neighbor\+Count\+\_\+test6}} ()
+\item 
+int \mbox{\hyperlink{test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_8c_a765ff890f1e9e61207712bc445df32a7}\label{test_8c_a765ff890f1e9e61207712bc445df32a7}} 
+\index{test.c@{test.c}!aliveNeighborCount\_test1@{aliveNeighborCount\_test1}}
+\index{aliveNeighborCount\_test1@{aliveNeighborCount\_test1}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount\_test1()}{aliveNeighborCount\_test1()}}
+{\footnotesize\ttfamily void alive\+Neighbor\+Count\+\_\+test1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                \{}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} circular=0;}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} arena[1000][1000];}
+\DoxyCodeLine{41     arena[0][0]=1;}
+\DoxyCodeLine{42     arena[0][1]=1;}
+\DoxyCodeLine{43     arena[0][2]=1;}
+\DoxyCodeLine{44     arena[2][0]=1;}
+\DoxyCodeLine{45     arena[2][1]=1;}
+\DoxyCodeLine{46     arena[1][0]=1;}
+\DoxyCodeLine{47     CU\_ASSERT(\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(1,1,arena,circular) == 6);}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_ad91ba5cc713e8c36c5e04c8b3106b4db}\label{test_8c_ad91ba5cc713e8c36c5e04c8b3106b4db}} 
+\index{test.c@{test.c}!aliveNeighborCount\_test2@{aliveNeighborCount\_test2}}
+\index{aliveNeighborCount\_test2@{aliveNeighborCount\_test2}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount\_test2()}{aliveNeighborCount\_test2()}}
+{\footnotesize\ttfamily void alive\+Neighbor\+Count\+\_\+test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                \{}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} circular=0;}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} arena[1000][1000]=\{0\};}
+\DoxyCodeLine{52     CU\_ASSERT(\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(1,1,arena,circular) == 0);}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a6662da30bb56af7b4b815e7ad08e7e85}\label{test_8c_a6662da30bb56af7b4b815e7ad08e7e85}} 
+\index{test.c@{test.c}!aliveNeighborCount\_test3@{aliveNeighborCount\_test3}}
+\index{aliveNeighborCount\_test3@{aliveNeighborCount\_test3}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount\_test3()}{aliveNeighborCount\_test3()}}
+{\footnotesize\ttfamily void alive\+Neighbor\+Count\+\_\+test3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 54 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                \{}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} circular=0;}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} arena[1000][1000];}
+\DoxyCodeLine{57     arena[0][0]=1;}
+\DoxyCodeLine{58     arena[0][1]=1;}
+\DoxyCodeLine{59     arena[0][2]=1;}
+\DoxyCodeLine{60     arena[2][0]=1;}
+\DoxyCodeLine{61     arena[2][1]=1;}
+\DoxyCodeLine{62     arena[2][2]=1;}
+\DoxyCodeLine{63     arena[1][0]=1;}
+\DoxyCodeLine{64     arena[1][2]=1;}
+\DoxyCodeLine{65     CU\_ASSERT(\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(1,1,arena,circular) == 8);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a62f1162ff3144c628f90b336c0a13d03}\label{test_8c_a62f1162ff3144c628f90b336c0a13d03}} 
+\index{test.c@{test.c}!aliveNeighborCount\_test4@{aliveNeighborCount\_test4}}
+\index{aliveNeighborCount\_test4@{aliveNeighborCount\_test4}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount\_test4()}{aliveNeighborCount\_test4()}}
+{\footnotesize\ttfamily void alive\+Neighbor\+Count\+\_\+test4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                \{}
+\DoxyCodeLine{69     \textcolor{comment}{//check if circular works fine within the arena}}
+\DoxyCodeLine{70     \textcolor{keywordtype}{int} circular=1;}
+\DoxyCodeLine{71     \textcolor{keywordtype}{int} arena[1000][1000]=\{0\};}
+\DoxyCodeLine{72     arena[0][1]=1;}
+\DoxyCodeLine{73     arena[1][0]=1;}
+\DoxyCodeLine{74     arena[1][1]=1;}
+\DoxyCodeLine{75     CU\_ASSERT(\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(0,0,arena,circular) == 3);}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a92abc93888185b07dd2b00780baa4dc5}\label{test_8c_a92abc93888185b07dd2b00780baa4dc5}} 
+\index{test.c@{test.c}!aliveNeighborCount\_test5@{aliveNeighborCount\_test5}}
+\index{aliveNeighborCount\_test5@{aliveNeighborCount\_test5}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount\_test5()}{aliveNeighborCount\_test5()}}
+{\footnotesize\ttfamily void alive\+Neighbor\+Count\+\_\+test5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                \{}
+\DoxyCodeLine{78     \textcolor{comment}{//check if circular works outside  the arena}}
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} circular=1;}
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} arena[1000][1000]=\{0\};}
+\DoxyCodeLine{81     arena[0][\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}-\/1]=1;}
+\DoxyCodeLine{82     arena[\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}-\/1][0]=1;}
+\DoxyCodeLine{83     arena[\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}-\/1][\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}-\/1]=1;\textcolor{comment}{//diognal}}
+\DoxyCodeLine{84     CU\_ASSERT(\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(0,0,arena,circular) == 3);}
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a366a468215a01efb4a19ddb515186824}\label{test_8c_a366a468215a01efb4a19ddb515186824}} 
+\index{test.c@{test.c}!aliveNeighborCount\_test6@{aliveNeighborCount\_test6}}
+\index{aliveNeighborCount\_test6@{aliveNeighborCount\_test6}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount\_test6()}{aliveNeighborCount\_test6()}}
+{\footnotesize\ttfamily void alive\+Neighbor\+Count\+\_\+test6 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                \{}
+\DoxyCodeLine{87      \textcolor{comment}{//check if circular works outside and within  the arena}}
+\DoxyCodeLine{88     \textcolor{keywordtype}{int} circular=1;}
+\DoxyCodeLine{89     \textcolor{keywordtype}{int} arena[1000][1000]=\{0\};}
+\DoxyCodeLine{90     arena[0][\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}-\/1]=1;}
+\DoxyCodeLine{91     arena[\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}-\/1][0]=1;}
+\DoxyCodeLine{92     arena[\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}-\/1][\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}-\/1]=1;}
+\DoxyCodeLine{93     arena[0][1]=1;}
+\DoxyCodeLine{94     arena[1][0]=1;}
+\DoxyCodeLine{95     arena[1][1]=1;}
+\DoxyCodeLine{96     CU\_ASSERT(\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(0,0,arena,circular) == 6);}
+\DoxyCodeLine{97 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_ab04072aee69e3bc6027a0e1dd618652d}\label{test_8c_ab04072aee69e3bc6027a0e1dd618652d}} 
+\index{test.c@{test.c}!isValidCellTest1@{isValidCellTest1}}
+\index{isValidCellTest1@{isValidCellTest1}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest1()}{isValidCellTest1()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                        \{}
+\DoxyCodeLine{17     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(1,1,5,5) == 1);}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a8f470cb878ec5eec1e52a3448b0647c1}\label{test_8c_a8f470cb878ec5eec1e52a3448b0647c1}} 
+\index{test.c@{test.c}!isValidCellTest2@{isValidCellTest2}}
+\index{isValidCellTest2@{isValidCellTest2}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest2()}{isValidCellTest2()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                        \{}
+\DoxyCodeLine{20     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(6,2,5,5) == 0);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a6c9722beafb95757f082e21831cb0e1b}\label{test_8c_a6c9722beafb95757f082e21831cb0e1b}} 
+\index{test.c@{test.c}!isValidCellTest3@{isValidCellTest3}}
+\index{isValidCellTest3@{isValidCellTest3}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest3()}{isValidCellTest3()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                        \{}
+\DoxyCodeLine{23     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(3,6,5,5) == 0);}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_ad721b57ad96191fd3343c7c55f20e9d8}\label{test_8c_ad721b57ad96191fd3343c7c55f20e9d8}} 
+\index{test.c@{test.c}!isValidCellTest4@{isValidCellTest4}}
+\index{isValidCellTest4@{isValidCellTest4}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest4()}{isValidCellTest4()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                        \{}
+\DoxyCodeLine{26     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(-\/1,1,5,5) == 0);}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_adb8e89f5b0a832141427a59437111cce}\label{test_8c_adb8e89f5b0a832141427a59437111cce}} 
+\index{test.c@{test.c}!isValidCellTest5@{isValidCellTest5}}
+\index{isValidCellTest5@{isValidCellTest5}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest5()}{isValidCellTest5()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                        \{}
+\DoxyCodeLine{29     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(1,-\/1,5,5) == 0);}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a5271572813d5eab56d2f64854731c259}\label{test_8c_a5271572813d5eab56d2f64854731c259}} 
+\index{test.c@{test.c}!isValidCellTest6@{isValidCellTest6}}
+\index{isValidCellTest6@{isValidCellTest6}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest6()}{isValidCellTest6()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test6 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                        \{}
+\DoxyCodeLine{32     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(3,4,5,5) == 1);}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_afbff68d24d39917d103e95526828c914}\label{test_8c_afbff68d24d39917d103e95526828c914}} 
+\index{test.c@{test.c}!isValidCellTest7@{isValidCellTest7}}
+\index{isValidCellTest7@{isValidCellTest7}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{isValidCellTest7()}{isValidCellTest7()}}
+{\footnotesize\ttfamily void is\+Valid\+Cell\+Test7 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                        \{}
+\DoxyCodeLine{35     CU\_ASSERT(\mbox{\hyperlink{game_8c_afdec5bebaa169840c6948574f5fdb7b3}{isValidCell}}(3,2,3,3) == 0);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test.c@{test.c}!main@{main}}
+\index{main@{main}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100           \{}
+\DoxyCodeLine{101     \textcolor{keywordflow}{if} (CUE\_SUCCESS!=CU\_initialize\_registry())}
+\DoxyCodeLine{102     \{}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} CU\_get\_error();}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105     }
+\DoxyCodeLine{106     CU\_initialize\_registry();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     CU\_pSuite ps1 = CU\_add\_suite(\textcolor{stringliteral}{"isValidCell\_test"}, 0, 0);}
+\DoxyCodeLine{109     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_ab04072aee69e3bc6027a0e1dd618652d}{isValidCellTest1}});}
+\DoxyCodeLine{110     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_a8f470cb878ec5eec1e52a3448b0647c1}{isValidCellTest2}});}
+\DoxyCodeLine{111     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_a6c9722beafb95757f082e21831cb0e1b}{isValidCellTest3}});}
+\DoxyCodeLine{112     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_ad721b57ad96191fd3343c7c55f20e9d8}{isValidCellTest4}});}
+\DoxyCodeLine{113     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_adb8e89f5b0a832141427a59437111cce}{isValidCellTest5}});}
+\DoxyCodeLine{114     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_a5271572813d5eab56d2f64854731c259}{isValidCellTest6}});}
+\DoxyCodeLine{115     CU\_ADD\_TEST(ps1,\mbox{\hyperlink{test_8c_afbff68d24d39917d103e95526828c914}{isValidCellTest7}});}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     CU\_pSuite ps2 = CU\_add\_suite(\textcolor{stringliteral}{"aliveNeighborCountClipped\_test"}, 0, 0);}
+\DoxyCodeLine{118     \textcolor{comment}{//for clipped}}
+\DoxyCodeLine{119     CU\_ADD\_TEST(ps2,\mbox{\hyperlink{test_8c_a765ff890f1e9e61207712bc445df32a7}{aliveNeighborCount\_test1}});}
+\DoxyCodeLine{120     CU\_ADD\_TEST(ps2,\mbox{\hyperlink{test_8c_ad91ba5cc713e8c36c5e04c8b3106b4db}{aliveNeighborCount\_test2}});}
+\DoxyCodeLine{121     CU\_ADD\_TEST(ps2,\mbox{\hyperlink{test_8c_a6662da30bb56af7b4b815e7ad08e7e85}{aliveNeighborCount\_test3}});}
+\DoxyCodeLine{122     }
+\DoxyCodeLine{123     \textcolor{comment}{//for circular}}
+\DoxyCodeLine{124     CU\_pSuite ps3 = CU\_add\_suite(\textcolor{stringliteral}{"aliveNeighborCountCircular\_test"}, 0, 0);}
+\DoxyCodeLine{125     }
+\DoxyCodeLine{126     CU\_ADD\_TEST(ps3,\mbox{\hyperlink{test_8c_a62f1162ff3144c628f90b336c0a13d03}{aliveNeighborCount\_test4}});}
+\DoxyCodeLine{127     CU\_ADD\_TEST(ps3,\mbox{\hyperlink{test_8c_a92abc93888185b07dd2b00780baa4dc5}{aliveNeighborCount\_test5}});}
+\DoxyCodeLine{128     CU\_ADD\_TEST(ps3,\mbox{\hyperlink{test_8c_a366a468215a01efb4a19ddb515186824}{aliveNeighborCount\_test6}});}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     CU\_basic\_set\_mode(CU\_BRM\_VERBOSE);}
+\DoxyCodeLine{131     CU\_basic\_run\_tests();}
+\DoxyCodeLine{132     CU\_cleanup\_registry();}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{keywordflow}{return} CU\_get\_number\_of\_failures();}
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a908fa51bbee7ba5a8d6b0abe351bc551}\label{test_8c_a908fa51bbee7ba5a8d6b0abe351bc551}} 
+\index{test.c@{test.c}!maxi@{maxi}}
+\index{maxi@{maxi}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{maxi()}{maxi()}}
+{\footnotesize\ttfamily int maxi (\begin{DoxyParamCaption}\item[{int}]{i1,  }\item[{int}]{i2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     \textcolor{keywordflow}{return} (i1 > i2) ? i1 : i2;}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test_8c_a69e244c6d5b506a50506783ca8f60b94}\label{test_8c_a69e244c6d5b506a50506783ca8f60b94}} 
+\index{test.c@{test.c}!test\_maxi@{test\_maxi}}
+\index{test\_maxi@{test\_maxi}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{test\_maxi()}{test\_maxi()}}
+{\footnotesize\ttfamily void test\+\_\+maxi (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file test.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     CU\_ASSERT(\mbox{\hyperlink{test_8c_a908fa51bbee7ba5a8d6b0abe351bc551}{maxi}}(0,2) == 2);}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
