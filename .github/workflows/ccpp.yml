@@ -1,6 +1,7 @@
 name: C/C++ CI
 
 on:
+  pull_request:
   push:
     branches:
     - master
@@ -9,16 +10,20 @@ on:
 jobs:
   build:
 
+    name: Running Unit Tests
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+      - name: configure
+        run: ./configure
       - name: Create build file
         run: |
           mkdir build 
           cd build
       - name: Run cmake make
         run: |
-          cmake
+          cmake ..
           make 
           cd ..
       - name: Run unitTests
