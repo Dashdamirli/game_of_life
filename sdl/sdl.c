@@ -1,9 +1,9 @@
 #include "sdl.h"
 
 /**
- * @brief The primary  function that dispals everything in SDL(Simple DirectMedia Layer)
- *
- * 
+ * @brief The primary  function that displays everything in SDL(Simple DirectMedia Layer)
+ *	The function sets the background color and then changes colors if the cell is alive or becomes alive.
+ * 	If a cell is dead or it becomes dead, the color is set back to background color 
  * @param renderer the default SDL renderer.
  * @param arena the 2D array which will be our arena where the algorithm runs.
  */
@@ -35,8 +35,9 @@ void draw(SDL_Renderer *renderer, int arena[row][col])
 }
 
 /**
- * @brief 
- *
+ * @brief Creates window and renderer for drawing on 
+ *	The function initialises the SDL2 ,readies everything for draw function.
+ *  It continuously calls draw function till SDL_QUIT event occurs
  * @param arena the 2D array which will be our arena where the algorithm runs.
  * @return 0 if everything went okay.
  */
