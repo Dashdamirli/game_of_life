@@ -22,7 +22,7 @@ jobs:
           cd build
       - name: Run cmake make
         run: |
-          cmake ..
+          cmake ../..
           make 
           cd ..
       - name: Run unitTests
