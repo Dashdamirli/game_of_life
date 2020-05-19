@@ -1,0 +1,118 @@
+\hypertarget{sdl_8c}{}\doxysection{C\+:/\+Users/\+Turqay/\+Desktop/game\+\_\+of\+\_\+life/sdl/sdl.c File Reference}
+\label{sdl_8c}\index{C:/Users/Turqay/Desktop/game\_of\_life/sdl/sdl.c@{C:/Users/Turqay/Desktop/game\_of\_life/sdl/sdl.c}}
+{\ttfamily \#include \char`\"{}sdl.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sdl_8c_a417276c0205ce9886f274df89abd6d9a}{draw}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int arena\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em The primary function that dispals everything in S\+D\+L(\+Simple Direct\+Media Layer) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sdl_8c_a85a10c7557e668570e1f6ad712b49c76}{draw\+Pixel}} (int arena\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sdl_8c_a417276c0205ce9886f274df89abd6d9a}\label{sdl_8c_a417276c0205ce9886f274df89abd6d9a}} 
+\index{sdl.c@{sdl.c}!draw@{draw}}
+\index{draw@{draw}!sdl.c@{sdl.c}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void draw (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{arena\mbox{[}row\mbox{]}\mbox{[}col\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+The primary function that dispals everything in S\+D\+L(\+Simple Direct\+Media Layer) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & the default S\+DL renderer. \\
+\hline
+{\em arena} & the 2D array which will be our arena where the algorithm runs. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file sdl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     SDL\_SetRenderDrawColor(renderer, 0, 0, 0, 255);}
+\DoxyCodeLine{13     SDL\_RenderClear(renderer);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     SDL\_SetRenderDrawColor(renderer, 255, 255, 255, 255);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} circular = 1;}
+\DoxyCodeLine{18     \mbox{\hyperlink{game_8c_a9ef9a56369c8d11d5a790aa0d8c30089}{refresh}}(arena, circular);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}; ++i)}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}; ++j)}
+\DoxyCodeLine{23         \{}
+\DoxyCodeLine{24             \textcolor{keywordflow}{if} (arena[i][j] == 1)}
+\DoxyCodeLine{25             \{}
+\DoxyCodeLine{26                 SDL\_SetRenderDrawColor(renderer, 255, 0, 0, 255);}
+\DoxyCodeLine{27             \}}
+\DoxyCodeLine{28             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{29             \{}
+\DoxyCodeLine{30                 SDL\_SetRenderDrawColor(renderer, 0, 0, 0, 255);}
+\DoxyCodeLine{31             \}}
+\DoxyCodeLine{32             SDL\_RenderDrawPoint(renderer, i, j);}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sdl_8c_a85a10c7557e668570e1f6ad712b49c76}\label{sdl_8c_a85a10c7557e668570e1f6ad712b49c76}} 
+\index{sdl.c@{sdl.c}!drawPixel@{drawPixel}}
+\index{drawPixel@{drawPixel}!sdl.c@{sdl.c}}
+\doxysubsubsection{\texorpdfstring{drawPixel()}{drawPixel()}}
+{\footnotesize\ttfamily int draw\+Pixel (\begin{DoxyParamCaption}\item[{int}]{arena\mbox{[}row\mbox{]}\mbox{[}col\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & the 2D array which will be our arena where the algorithm runs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if everything went okay. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file sdl.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     \textcolor{keywordflow}{if} (SDL\_Init(SDL\_INIT\_VIDEO) != 0)}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47         fprintf(stderr, \textcolor{stringliteral}{"Problem can not init SDL2 \(\backslash\)n"});}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     SDL\_Window *window = SDL\_CreateWindow(\textcolor{stringliteral}{"Life"},}
+\DoxyCodeLine{52                                           SDL\_WINDOWPOS\_UNDEFINED, SDL\_WINDOWPOS\_UNDEFINED,}
+\DoxyCodeLine{53                                           \mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}, \mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}, SDL\_WINDOW\_SHOWN | SDL\_WINDOW\_ALLOW\_HIGHDPI);}
+\DoxyCodeLine{54     SDL\_Renderer *renderer = SDL\_CreateRenderer(window, -\/1, SDL\_RENDERER\_ACCELERATED | SDL\_RENDERER\_PRESENTVSYNC);}
+\DoxyCodeLine{55     assert(renderer != NULL);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{// SIMPLE EVENT \& DRAWING LOOP}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{bool} quit = \textcolor{keyword}{false};}
+\DoxyCodeLine{59     \textcolor{keywordflow}{while} (!quit)}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         SDL\_Event event;}
+\DoxyCodeLine{62         \textcolor{keywordflow}{while} (!quit \&\& SDL\_PollEvent(\&event))}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             \textcolor{keywordflow}{switch} (event.type)}
+\DoxyCodeLine{65             \{}
+\DoxyCodeLine{66             \textcolor{keywordflow}{case} SDL\_QUIT:}
+\DoxyCodeLine{67                 quit = \textcolor{keyword}{true};}
+\DoxyCodeLine{68                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{69             \}}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71         \mbox{\hyperlink{sdl_8c_a417276c0205ce9886f274df89abd6d9a}{draw}}(renderer, arena);}
+\DoxyCodeLine{72         SDL\_RenderPresent(renderer);}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74     SDL\_Quit();}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}

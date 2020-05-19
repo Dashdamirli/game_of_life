@@ -1,0 +1,62 @@
+\hypertarget{board__drawer_8c}{}\doxysection{C\+:/\+Users/\+Turqay/\+Desktop/game\+\_\+of\+\_\+life/console/board\+\_\+drawer.c File Reference}
+\label{board__drawer_8c}\index{C:/Users/Turqay/Desktop/game\_of\_life/console/board\_drawer.c@{C:/Users/Turqay/Desktop/game\_of\_life/console/board\_drawer.c}}
+{\ttfamily \#include \char`\"{}board\+\_\+drawer.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{board__drawer_8c_acca5ade590f6d7d9adfd086083af6933}{print\+Colored}} (int arena\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Prints the game onto the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{board__drawer_8c_acca5ade590f6d7d9adfd086083af6933}\label{board__drawer_8c_acca5ade590f6d7d9adfd086083af6933}} 
+\index{board\_drawer.c@{board\_drawer.c}!printColored@{printColored}}
+\index{printColored@{printColored}!board\_drawer.c@{board\_drawer.c}}
+\doxysubsubsection{\texorpdfstring{printColored()}{printColored()}}
+{\footnotesize\ttfamily void print\+Colored (\begin{DoxyParamCaption}\item[{int}]{arena\mbox{[}row\mbox{]}\mbox{[}col\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Prints the game onto the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & the space where it will be build \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file board\+\_\+drawer.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keywordtype}{int} k = 0;}
+\DoxyCodeLine{10     \textcolor{keywordflow}{while} (k < 500)}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12         \textcolor{comment}{//clear screen}}
+\DoxyCodeLine{13         printf(\textcolor{stringliteral}{"\(\backslash\)033[2J"});}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{comment}{//hide cursor}}
+\DoxyCodeLine{16         printf(\textcolor{stringliteral}{"\(\backslash\)033[?25l"});}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18         \textcolor{comment}{//goto 0,0}}
+\DoxyCodeLine{19         printf(\textcolor{stringliteral}{"\(\backslash\)033[0;0H"});}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 40; ++i)}
+\DoxyCodeLine{22         \{}
+\DoxyCodeLine{23             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 40; ++j)}
+\DoxyCodeLine{24             \{}
+\DoxyCodeLine{25                 \textcolor{keywordtype}{int} c = (arena[i][j] == 1) ? 40 : 101;}
+\DoxyCodeLine{26                 printf(\textcolor{stringliteral}{"\(\backslash\)033[\%dm "}, c);}
+\DoxyCodeLine{27             \}}
+\DoxyCodeLine{28             printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{comment}{//show cursor}}
+\DoxyCodeLine{32         printf(\textcolor{stringliteral}{"\(\backslash\)033[?25h"});}
+\DoxyCodeLine{33         \mbox{\hyperlink{game_8c_a9ef9a56369c8d11d5a790aa0d8c30089}{refresh}}(arena, 1);}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
