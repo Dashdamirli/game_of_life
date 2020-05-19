@@ -1,0 +1,24 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create build file
+        run: |
+          mkdir build 
+          cd build
+      - name: Run cmake make
+        run: |
+          cmake
+          make 
+      - name: Run program
+        run: ./game_of_life 
