@@ -18,7 +18,7 @@ int isValidCell(int x, int y, int r, int c)
 /**
  * @brief Finds the alive neighbor count.
  *
- * Checks all cells arond the position and based on parameter of users choice find neighbors for 
+ * Checks all cells around the position and based on parameter of users choice find neighbors for 
  * circular or clipped integration.
  * for circular it checks the corresponding neighbors, mainly its parallels for sides and its reverse corner for diagonal.
  * For example, if the neighbor is out of boundaries from the top right corner it is gonna shift it and check the bottom left corner
@@ -105,7 +105,7 @@ int aliveNeighborCount(int i, int j, int a[row][col], int circular)
 /**
  * @brief Printfs 2Da array
  *
- * Sets all values of an array to another array
+ * Prints given array
  * @param array 2D array of type int
 
  */
