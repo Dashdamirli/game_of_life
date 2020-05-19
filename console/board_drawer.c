@@ -4,7 +4,7 @@
  * @brief Prints the game onto the console
  * @param arena the space where it will be build
  */
-void printColored(int arena[row][col])
+void printColored(int arena[row][col],int circular)
 {
     int k = 0;
     while (k < 500)
@@ -30,6 +30,6 @@ void printColored(int arena[row][col])
 
         //show cursor
         printf("\033[?25h");
-        refresh(arena, 1);
+        refresh(arena, circular);
     }
 }
