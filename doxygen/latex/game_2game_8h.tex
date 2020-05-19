@@ -1,0 +1,204 @@
+\hypertarget{game_2game_8h}{}\doxysection{C\+:/\+Users/\+Turqay/\+Desktop/game\+\_\+of\+\_\+life/game/game.h File Reference}
+\label{game_2game_8h}\index{C:/Users/Turqay/Desktop/game\_of\_life/game/game.h@{C:/Users/Turqay/Desktop/game\_of\_life/game/game.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}~1000
+\item 
+\#define \mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}~1000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game_2game_8h_a02ffcc6425756fafe3ba34cd86ada24e}{is\+Valid\+Cell}} (int, int, int, int)
+\begin{DoxyCompactList}\small\item\em This function checks if a neighbor is out of array boundries. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_2game_8h_aa963347fc5a28454f6ba2e9d00bb5d2c}{alive\+Neighbor\+Count}} (int i, int j, int a\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}, int circular)
+\item 
+void \mbox{\hyperlink{game_2game_8h_a8e2f8679cdbc97c3e385179224d35c51}{print\+Arena}} (int a\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Printfs 2Da array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_2game_8h_aa302a3260f70a1c0b5b858399141f291}{copy\+\_\+arr}} (int old\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]}, int newa\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Dublicates an array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_2game_8h_a9ef9a56369c8d11d5a790aa0d8c30089}{refresh}} (int arena\mbox{[}\mbox{\hyperlink{include_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}\mbox{]}\mbox{[}\mbox{\hyperlink{include_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}\mbox{]}, int circular)
+\begin{DoxyCompactList}\small\item\em Resreshes the array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{game_2game_8h_a754f5c59516f130c30fc468b98c65154}\label{game_2game_8h_a754f5c59516f130c30fc468b98c65154}} 
+\index{game.h@{game.h}!col@{col}}
+\index{col@{col}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily \#define col~1000}
+
+
+
+Definition at line 7 of file game.\+h.
+
+\mbox{\Hypertarget{game_2game_8h_aece949dcac4360a3141f73eaec44e155}\label{game_2game_8h_aece949dcac4360a3141f73eaec44e155}} 
+\index{game.h@{game.h}!row@{row}}
+\index{row@{row}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily \#define row~1000}
+
+
+
+Definition at line 8 of file game.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_2game_8h_aa963347fc5a28454f6ba2e9d00bb5d2c}\label{game_2game_8h_aa963347fc5a28454f6ba2e9d00bb5d2c}} 
+\index{game.h@{game.h}!aliveNeighborCount@{aliveNeighborCount}}
+\index{aliveNeighborCount@{aliveNeighborCount}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{aliveNeighborCount()}{aliveNeighborCount()}}
+{\footnotesize\ttfamily int alive\+Neighbor\+Count (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{a\mbox{[}col\mbox{]}\mbox{[}row\mbox{]},  }\item[{int}]{circular }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{game_2game_8h_aa302a3260f70a1c0b5b858399141f291}\label{game_2game_8h_aa302a3260f70a1c0b5b858399141f291}} 
+\index{game.h@{game.h}!copy\_arr@{copy\_arr}}
+\index{copy\_arr@{copy\_arr}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{copy\_arr()}{copy\_arr()}}
+{\footnotesize\ttfamily void copy\+\_\+arr (\begin{DoxyParamCaption}\item[{int}]{oldarr\mbox{[}row\mbox{]}\mbox{[}col\mbox{]},  }\item[{int}]{newarr\mbox{[}row\mbox{]}\mbox{[}col\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Dublicates an array. 
+
+Sets all values of an array to another array 
+\begin{DoxyParams}{Parameters}
+{\em oldarr} & original array. \\
+\hline
+{\em newarr} & the dublicated one. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file game.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132 \{}
+\DoxyCodeLine{133     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}; i++)}
+\DoxyCodeLine{134     \{}
+\DoxyCodeLine{135         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}; j++)}
+\DoxyCodeLine{136         \{}
+\DoxyCodeLine{137             newarr[i][j] = oldarr[i][j];}
+\DoxyCodeLine{138         \}}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{game_2game_8h_a02ffcc6425756fafe3ba34cd86ada24e}\label{game_2game_8h_a02ffcc6425756fafe3ba34cd86ada24e}} 
+\index{game.h@{game.h}!isValidCell@{isValidCell}}
+\index{isValidCell@{isValidCell}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{isValidCell()}{isValidCell()}}
+{\footnotesize\ttfamily int is\+Valid\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+This function checks if a neighbor is out of array boundries. 
+
+The way it checks it is ,it gets 4 parameters ,the {\ttfamily x} and {\ttfamily y} positions and array boundires as in rows and and columns. \begin{DoxyReturn}{Returns}
+1 if its in boundries and 0 if its out. 
+\end{DoxyReturn}
+
+
+Definition at line 10 of file game.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keywordflow}{if} ((x >= 0 \&\& x < r) \&\& (y >= 0 \&\& y < c))}
+\DoxyCodeLine{13         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{14     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{15         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{game_2game_8h_a8e2f8679cdbc97c3e385179224d35c51}\label{game_2game_8h_a8e2f8679cdbc97c3e385179224d35c51}} 
+\index{game.h@{game.h}!printArena@{printArena}}
+\index{printArena@{printArena}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{printArena()}{printArena()}}
+{\footnotesize\ttfamily void print\+Arena (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}col\mbox{]}\mbox{[}row\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Printfs 2Da array. 
+
+Sets all values of an array to another array 
+\begin{DoxyParams}{Parameters}
+{\em array} & 2D array of type int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file game.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113 \{}
+\DoxyCodeLine{114     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}; i++)}
+\DoxyCodeLine{115     \{}
+\DoxyCodeLine{116         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}; j++)}
+\DoxyCodeLine{117         \{}
+\DoxyCodeLine{118             printf(\textcolor{stringliteral}{"\%d "}, a[i][j]);}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120         printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{121     \}}
+\DoxyCodeLine{122 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{game_2game_8h_a9ef9a56369c8d11d5a790aa0d8c30089}\label{game_2game_8h_a9ef9a56369c8d11d5a790aa0d8c30089}} 
+\index{game.h@{game.h}!refresh@{refresh}}
+\index{refresh@{refresh}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void refresh (\begin{DoxyParamCaption}\item[{int}]{arena\mbox{[}row\mbox{]}\mbox{[}col\mbox{]},  }\item[{int}]{circular }\end{DoxyParamCaption})}
+
+
+
+Resreshes the array. 
+
+Checks for alive and dead neighbors based on parameter array and the type of integration. Uses the function alive\+Neighbor\+Count to determine which sells to add or remove. 
+\begin{DoxyParams}{Parameters}
+{\em array} & 2D array of type int \\
+\hline
+{\em circular} & to decide wether the arena will be circular or clipped \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file game.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152 \{}
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} new\_arena[\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}][\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}] = \{0\};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{156     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}; i++)}
+\DoxyCodeLine{157     \{}
+\DoxyCodeLine{158         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}; j++)}
+\DoxyCodeLine{159         \{}
+\DoxyCodeLine{160             \textcolor{keywordflow}{if} (arena[i][j] == 0)}
+\DoxyCodeLine{161             \{}
+\DoxyCodeLine{162                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(i, j, arena, circular) == 3)}
+\DoxyCodeLine{163                     new\_arena[i][j] = 1;}
+\DoxyCodeLine{164                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{165                     new\_arena[i][j] = 0;}
+\DoxyCodeLine{166             \}}
+\DoxyCodeLine{167             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{168             \{}
+\DoxyCodeLine{169                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(i, j, arena, circular) == 2 || \mbox{\hyperlink{game_8c_a04cf653f16a60aa06174d166b68c8049}{aliveNeighborCount}}(i, j, arena, circular) == 3)}
+\DoxyCodeLine{170                     new\_arena[i][j] = 1;}
+\DoxyCodeLine{171                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{172                     new\_arena[i][j] = 0;}
+\DoxyCodeLine{173             \}}
+\DoxyCodeLine{174         \}}
+\DoxyCodeLine{175     \}}
+\DoxyCodeLine{176     sleep(0.1);}
+\DoxyCodeLine{177     \mbox{\hyperlink{game_8c_a79795b891baae9bc5ef1e8be274a6c18}{copy\_arr}}(new\_arena, arena);}
+\DoxyCodeLine{178 \}}
+
+\end{DoxyCode}

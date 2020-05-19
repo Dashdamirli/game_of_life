@@ -1,0 +1,44 @@
+\hypertarget{_c_make_lists_8txt}{}\doxysection{C\+:/\+Users/\+Turqay/\+Desktop/game\+\_\+of\+\_\+life/\+C\+Make\+Lists.txt File Reference}
+\label{_c_make_lists_8txt}\index{C:/Users/Turqay/Desktop/game\_of\_life/CMakeLists.txt@{C:/Users/Turqay/Desktop/game\_of\_life/CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_make_lists_8txt_a76baf1912022f22e8aba5e5aae731390}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+6) cmake\+\_\+policy(S\+ET C\+M\+P0076 N\+EW) project(game\+\_\+of\+\_\+life) add\+\_\+subdirectory(console) add\+\_\+subdirectory(game) add\+\_\+subdirectory(sdl) set(S\+RC main.\+c) add\+\_\+executable(\$
+\item 
+\mbox{\hyperlink{_c_make_lists_8txt_a4d181224415cb4dea2f478872e1a47ce}{target\+\_\+sources}} (\$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+ME\} P\+U\+B\+L\+IC \$\{S\+RC\}) target\+\_\+link\+\_\+libraries(\$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_c_make_lists_8txt_a76baf1912022f22e8aba5e5aae731390}\label{_c_make_lists_8txt_a76baf1912022f22e8aba5e5aae731390}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{6 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                 \{PROJECT\_NAME\} \textcolor{stringliteral}{""})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_c_make_lists_8txt_a4d181224415cb4dea2f478872e1a47ce}\label{_c_make_lists_8txt_a4d181224415cb4dea2f478872e1a47ce}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!target\_sources@{target\_sources}}
+\index{target\_sources@{target\_sources}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{target\_sources()}{target\_sources()}}
+{\footnotesize\ttfamily target\+\_\+sources (\begin{DoxyParamCaption}\item[{}]{\$\{\+P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\} P\+U\+B\+L\+I\+C \$\{\+S\+R\+C\} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                 \{PROJECT\_NAME\} PUBLIC \$\{SRC\})}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 target\_link\_libraries(\$\{PROJECT\_NAME\} PUBLIC console game sdl)}
+
+\end{DoxyCode}

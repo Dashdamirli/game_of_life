@@ -1,0 +1,54 @@
+\hypertarget{main_8c}{}\doxysection{C\+:/\+Users/\+Turqay/\+Desktop/game\+\_\+of\+\_\+life/main.c File Reference}
+\label{main_8c}\index{C:/Users/Turqay/Desktop/game\_of\_life/main.c@{C:/Users/Turqay/Desktop/game\_of\_life/main.c}}
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board\+\_\+drawer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sdl.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file main.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7    \textcolor{keywordtype}{int} arena[\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}}][\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}}] = \{0\};}
+\DoxyCodeLine{8    }
+\DoxyCodeLine{9    srand(time(NULL));}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} r = 0; r < 70000; r++)}
+\DoxyCodeLine{12    \{}
+\DoxyCodeLine{13       \textcolor{keywordtype}{int} r1 = rand() \% (\mbox{\hyperlink{game_2game_8h_aece949dcac4360a3141f73eaec44e155}{row}} -\/ 1);}
+\DoxyCodeLine{14       \textcolor{keywordtype}{int} r2 = rand() \% (\mbox{\hyperlink{game_2game_8h_a754f5c59516f130c30fc468b98c65154}{col}} -\/ 1);}
+\DoxyCodeLine{15       arena[r1][r2] = 1;}
+\DoxyCodeLine{16    \}}
+\DoxyCodeLine{17    \textcolor{keywordtype}{char} input;}
+\DoxyCodeLine{18    printf(\textcolor{stringliteral}{"Enter [t] for terminal and [s] for SDL version\(\backslash\)n"});}
+\DoxyCodeLine{19    scanf(\textcolor{stringliteral}{"\%c"},\&input);}
+\DoxyCodeLine{20    \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{21       \textcolor{keywordflow}{if}(input == \textcolor{charliteral}{'t'})\{}
+\DoxyCodeLine{22          \mbox{\hyperlink{board__drawer_8c_acca5ade590f6d7d9adfd086083af6933}{printColored}}(arena);}
+\DoxyCodeLine{23          \textcolor{keywordflow}{break};}
+\DoxyCodeLine{24       \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(input == \textcolor{charliteral}{'s'})\{}
+\DoxyCodeLine{25          \mbox{\hyperlink{include_2sdl_8h_a85a10c7557e668570e1f6ad712b49c76}{drawPixel}}(arena);}
+\DoxyCodeLine{26          \textcolor{keywordflow}{break};}
+\DoxyCodeLine{27       \}\textcolor{keywordflow}{else} printf(\textcolor{stringliteral}{"Please enter either [t] or [s]\(\backslash\)n"});}
+\DoxyCodeLine{28    \}}
+\DoxyCodeLine{29    }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}

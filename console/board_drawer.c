@@ -1,13 +1,14 @@
 #include "board_drawer.h"
 
-
 /**
- * @brief prints the game onto the console
+ * @brief Prints the game onto the console
+ * @param arena the space where it will be build
  */
 void printColored(int arena[row][col])
 {
-    int k=0;
-    while(k<500){
+    int k = 0;
+    while (k < 500)
+    {
         //clear screen
         printf("\033[2J");
 
@@ -29,6 +30,6 @@ void printColored(int arena[row][col])
 
         //show cursor
         printf("\033[?25h");
-        refresh(arena,1);
+        refresh(arena, 1);
     }
 }

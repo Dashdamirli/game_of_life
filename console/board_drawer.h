@@ -4,5 +4,4 @@
 
 void printColored(int arena[row][col]);
 
-
 #endif
