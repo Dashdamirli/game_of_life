@@ -20,5 +20,10 @@ jobs:
         run: |
           cmake
           make 
-      - name: Run program
-        run: ./game_of_life 
+          cd ..
+      - name: Run unitTests
+        run: |
+          cd unitTests
+          gcc test.c -o test -lcunit
+          ./test
+        
