@@ -16,15 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create build file
-        run: |
-          cd ../..
-          mkdir build 
-          cd build
-      - name: Run cmake make
-        run: |
-          cmake ../..
-          make 
-          cd ..
+      #   run: |
+      #     cd ../..
+      #     mkdir build 
+      #     cd build
+      # - name: Run cmake make
+      #   run: |
+      #     cmake ../..
+      #     make 
+      #     cd ..
       - name: Run unitTests
         run: |
           cd unitTests
