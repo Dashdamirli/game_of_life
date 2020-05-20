@@ -1,6 +1,7 @@
 name: C/C++ CI
 
 on:
+  pull_request:
   push:
     branches:
     - master
@@ -9,21 +10,15 @@ on:
 jobs:
   build:
 
+    name: Running Unit Tests
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create build file
-        run: |
-          mkdir build 
-          cd build
-      - name: Run cmake make
-        run: |
-          cmake
-          make 
-          cd ..
+      - uses: actions/checkout@v2
+      - name: Download dependecies
+        run: sudo apt-get install libcunit1 libcunit1-doc libcunit1-dev
       - name: Run unitTests
         run: |
           cd unitTests
           gcc test.c -o test -lcunit
           ./test
-        
