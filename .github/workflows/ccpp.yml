@@ -19,7 +19,6 @@ jobs:
         run: sudo apt-get install libcunit1 libcunit1-doc libcunit1-dev
       - name: Run unitTests
         run: |
-          cd unitTests
           gcc test.c -o test -lcunit
           ./test
         
